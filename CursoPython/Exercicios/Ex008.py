@@ -6,5 +6,5 @@ metros = float(input("Digite os metros que deseja converter: "))
 cm = float(metros * 100)
 mm= float(metros * 1000)
 
-print(f"{metros} metros em centimetros é: {cm} centimetros")
-print(f"{metros} metros em milimetros é: {mm} milimetros")
+print(f"{metros} metros em centimetros é: {cm:.0f} centimetros")
+print(f"{metros} metros em milimetros é: {mm:.0f} milimetros")
