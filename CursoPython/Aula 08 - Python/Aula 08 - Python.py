@@ -1,2 +1,4 @@
 #Utilizando módulos:
 
+import emoji
+
