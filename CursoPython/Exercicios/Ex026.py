@@ -10,6 +10,6 @@ print(len(frase))
 
 #print(frase.count('a', 0, 19))
 
-print(frase..find('a'))
+print(frase.find('a'))
 
 
