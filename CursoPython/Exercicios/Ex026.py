@@ -1,15 +1,16 @@
 #Faça um programa que leia uma frase pelo teclado e mostre:
+#Exercicio Aula 09
 
 #-> Quantas vezes aparece a letra "A";
 #-> Em que posição ela aparece a primeira vez;
 #-> Em que posição ela aparece a última vez.
 
-frase = input("Digite uma frase: ")
+frase = str(input("Digite uma frase: ")).strip().lower()
 
-print(len(frase))
+print(f"Na frase digitada contém {frase.count('a')} letra(s) 'A'")
 
-#print(frase.count('a', 0, 19))
+print(f"A letra 'A' aparece a primeira vez na posicão: {frase.find('a')}")
 
-print(frase.find('a'))
+print(f"A letra 'A' aparece a última vez na posicão: {frase.rfind('a')}")
 
 

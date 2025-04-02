@@ -1,5 +1,6 @@
 #Aula 09 - Manipulando Texto
 
+#Três Aspas em sequência seguirá as linhas de acordo com o texto!
 #print("""Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.
 #Vivamus sed nulla vitae eros interdum pharetra. Fusce tristique, purus sed eleifend egestas,
 #felis purus aliquam metus, non auctor enim odio at ligula. Mauris volutpat sem in tortor placerat,
@@ -33,7 +34,7 @@ frase = "Curso em vídeo Python"
 #print(frase.lower())
 #print(frase.capitalize()) - Deixa somente a primeira letra maiúscula
 #print(frase.title()) - Deixe todas primeiras letras maiúsculas
-#print(frase.strip())
+#print(frase.strip()) - Remove os espaços antes e depois da string
 #print(frase.rstrip()) - Direita
 #print(frase.lstrip()) - Esquerda
 #print(frase.split())
