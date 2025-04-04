@@ -8,11 +8,14 @@
 
 print("Calcule seu aumento salárial!")
 
-salario = float(input("Digite seu salário atual: "))
+salario = float(input("Digite seu salário atual: R$"))
 
-if(salario <= 1.250):
+if (salario <= 1250):
+
     aumento_salarial = (salario + (salario * 15 / 100))
     print(f"Seu salário vai receber um aumento de 15% e vai passar a ser R${aumento_salarial:.2f}")
-elif(salario > 1.250):
+
+elif (salario > 1250):
+
     aumento_salarial = (salario + (salario * 10 / 100))
     print(f"Seu salário vai receber um aumento de 10% e vai passar a ser R${aumento_salarial:.2f}")
