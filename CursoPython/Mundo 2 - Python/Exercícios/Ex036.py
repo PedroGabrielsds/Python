@@ -7,12 +7,12 @@
 
 #Calcule o valor da prestação mensal, sabendo que ela não pode exceder 30% do salário ou então o empréstimo será negado.
 
-print("\033[1;37;40m=--=--=--=--=--=--=--=--=--=--=--=--=--=--=\033[m")
+print("\033[1;37;40m|--=--=--=--=--=--=--=--=--=--=--=--=--=--|\033[m")
 print("\033[1;37;40m|--=--=--=-\033[m \033[1;31;40mBem vindo ao MackBank\033[m \033[1;37;40m-=--=--=|\033[m")
-print("\033[1;37;40m=--=--=--=--=--=--=--=--=--=--=--=--=--=--=\033[m")
+print("\033[1;37;40m|--=--=--=--=--=--=--=--=--=--=--=--=--=--|\033[m")
 
 #Coleta de dados para o possível empréstimo
-print("\033[1;31;40mPeça seu empréstimo aqui\033[m")
+print("\033[1;33;40mPeça seu empréstimo aqui\033[m")
 valor_casa = float(input("Qual é o valor da casa?"))
 valor_salario = float(input("Qual seu salário atual? "))
 pay_years = int(input("Em quantos anos pretende pagar o empréstimo? "))
@@ -26,11 +26,5 @@ if(valor_parcela > porcentagem_salario):
     print("Seu empréstimo foi \033[1;31;40mNEGADO!!\033[m")
 
 else:
-    print("\033[1;36;40mParabéns, você conseguiu o seu empréstimo e conseguirá comprar sua casa!!\033[m")
-    print(f"Sua parcela ficou no valor de \033[1;32;40mR${valor_parcela:2f}\033[m por mês durante \033[1;33;40m{pay_years}\033[m anos!")
-
-
-
-
-
-
+    print("\033[1;32;40mParabéns, você conseguiu o seu empréstimo e conseguirá comprar sua casa!!\033[m")
+    print(f"Sua parcela ficou no valor de \033[1;32;40mR${valor_parcela}\033[m por mês durante \033[1;33;40m{pay_years}\033[m anos!")
