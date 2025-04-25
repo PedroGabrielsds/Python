@@ -11,25 +11,25 @@
 #- Até 20 anos: Sênior
 #- Acima: Master
 
+import datetime
 
-print("\033[1;36;40m-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-\033[m")
-print("\033[1;36;40m|\033[m  \033[1;32;40mSeja bem vindo à Confederação \033[m\033[1;33;40mNacional de Natação\033[m  \033[1;36;40m|\033[m")
-print("\033[1;36;40m-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-\033[m")
+print("\033[1;34;40m-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-\033[m")
+print("\033[1;34;40m|\033[m  \033[1;32;40mSeja bem vindo a Confederação \033[m\033[1;33;40mNacional de Natação\033[m  \033[1;34;40m|\033[m")
+print("\033[1;34;40m-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-\033[m")
 
-idade = int(input("Digite sua idade e descubra sua categoria de nado: "))
+ano_atual = datetime.date.today().year
+ano_nascimento = int(input("Ano de nascimento: "))
 
+idade = (ano_atual - ano_nascimento)
+
+print(f"Quem nasceu em {ano_nascimento} tem {idade} anos de idade!")
 if(idade <= 9):
-    print(f"Idades abaixo de {idade} é da categoria: Mirim")
-    print(f"Sua categoria de nado é: MIRIM")
+    print(f"A categoria de nado para sua idade é: \033[1;35;40mMIRIM\033[m")
 elif(idade <= 14):
-    print(f"Idades abaixo de {idade} são da categoria: Infantil")
-    print(f"Sua categoria de nado é: Infantil")
+    print(f"A categoria de nado para sua idade é: \033[1;34;40mInfantil\033[m")
 elif(idade <= 19):
-    print(f"Idades abaixo de {idade} são da categoria: Junior")
-    print(f"Sua categoria de nado é: Junior")
+    print(f"A categoria de nado para sua idade é: \033[1;32;40mJunior\033[m")
 elif(idade <= 20):
-    print(f"Idades abaixo de {idade} são da categoria: Sênior")
-    print(f"Sua categoria de nado é: Sênior")
+    print(f"A categoria de nado para sua idade é: \033[1;33;40mSênior\033[m")
 else:
-    print(f"Idades acima de {idade} são da categoria: Master")
-    print(f"Sua categoria de nado é: Master")
+    print(f"A categoria de nado para sua idade é: \033[1;31;40mMaster\033[m")
