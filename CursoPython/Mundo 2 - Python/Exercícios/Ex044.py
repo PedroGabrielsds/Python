@@ -46,12 +46,12 @@ elif(forma_pagamento == 4):
         print(f"O valor final para o pagamento em 2x no cartão é de \033[1;32;40mR${dividido_duas_vezes:.2f}\033[m")
     elif(parcelas < 2):
         a_vista_cartao = (valor_pagamento - (valor_pagamento * 5 / 100))
-        print(f"O valor final para o pagamento à vista no cartão é de \033[1;32;40mR${a_vista_cartao:.2f}")
+        print(f"O valor final para o pagamento à vista no cartão é de \033[1;32;40mR${a_vista_cartao:.2f}\033[m")
     else:
         parcelado = (valor_pagamento / parcelas)
         parcela_com_juros = parcelado + (parcelado * 20 / 100)
         dividido_tres_ou_mais_vezes_com_juros = (valor_pagamento + (valor_pagamento * 20 / 100))
-        print(f"Sua compra foi parcelada em {parcelas}x de R${parcela_com_juros:.2f} com juros!!")
+        print(f"Sua compra foi parcelada em {parcelas}x de \033[1;32;40mR${parcela_com_juros:.2f}\033[m com juros!!")
         print(f"O valor final será \033[1;32;40mR${dividido_tres_ou_mais_vezes_com_juros:.2f}\033[m no final!!")
 else:
     print(f"\033[1;31;40mO método de pagamento não existe!!\033[m")
