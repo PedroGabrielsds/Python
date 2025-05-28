@@ -6,7 +6,7 @@
 from time import sleep
 from traceback import clear_frames
 
-for contador in range(10, 0, -1):
+for contador in range(10, -1, -1):
     print(contador)
     sleep(1)
 import pygame
@@ -16,5 +16,3 @@ pygame.mixer.music.load('ex046.mp3')
 pygame.mixer.music.play()
 input()
 pygame.event.wait()
-
-
