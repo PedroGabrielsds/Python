@@ -6,3 +6,5 @@
 #A torre da derrota
 #O lobo ama o bolo
 #Anotaram a data da maratona
+
+frase = str(input("Digite uma frase: "))

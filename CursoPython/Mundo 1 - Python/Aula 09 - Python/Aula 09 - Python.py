@@ -45,27 +45,5 @@ frase = "Curso em vídeo Python"
 #print('-'.join(dividido))
 #==============================================
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-dividido = frase.split()
-print(dividido[0] [3])
-
+#dividido = frase.split()
+#print(dividido[0] [3])
