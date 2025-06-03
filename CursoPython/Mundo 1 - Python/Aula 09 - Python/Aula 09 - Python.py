@@ -38,7 +38,7 @@ frase = "Curso em vídeo Python"
 #print(frase.rstrip()) - Direita
 #print(frase.lstrip()) - Esquerda
 #print(frase.split())
-#dividido = frase.split()
+dividido = frase.split()
 #print(dividido)
 #print(dividido [2] [3])
 #Junção
@@ -46,4 +46,4 @@ frase = "Curso em vídeo Python"
 #==============================================
 
 #dividido = frase.split()
-#print(dividido[0] [3])
+print(dividido[0] [3])
