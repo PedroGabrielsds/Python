@@ -6,7 +6,7 @@ maior_peso = 0
 menor_peso = 0
 
 for contador in range(1, 6):
-    peso = float(input("Qual seu peso: "))
+    peso = float(input(f"Peso da {contador} pessoa: Kg"))
     if(maior_peso == 0):
         maior_peso = peso
         menor_peso = peso
@@ -17,5 +17,5 @@ for contador in range(1, 6):
         elif(peso < menor_peso):
             menor_peso = peso
 
-print(f"O maior peso foi {maior_peso}")
-print(f"O menor peso foi {menor_peso}")
+print(f"O maior peso foi {maior_peso}Kg")
+print(f"O menor peso foi {menor_peso}Kg")

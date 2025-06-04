@@ -17,15 +17,12 @@ else:
             print(f"\033[1;33;40m{contador}\033[m", end=" ")
 
         else:
-
             print(f"\033[1;31;40m{contador}\033[m", end=" ")
-
-    print(f"")
 
     if(divisivel == 2):
 
-        print(f"""O número {numero} foi divisível {divisivel} vezes!
+        print(f"""\nO número {numero} foi divisível {divisivel} vezes!
 E por isso ele é primo""")
 
     else:
-        print(f"""O número {numero} não é primo, pois foi divisível {divisivel} vezes!!""")
+        print(f"""\nO número {numero} não é primo, pois foi divisível {divisivel} vezes!!""")
