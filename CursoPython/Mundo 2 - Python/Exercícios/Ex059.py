@@ -10,11 +10,11 @@
 #Seu programa deverá realizar a operação solicitada em cada caso
 
 opcao = 0
+print(f"================| Inicio |==================")
+valor_1 = int(input(f"Digite um valor: "))
+valor_2 = int(input(f"Digite mais um valor: "))
 
 while(opcao != 5):
-    print(f"================| Inicio |==================")
-    valor_1 = int(input(f"Digite um valor: "))
-    valor_2 = int(input(f"Digite mais um valor: "))
     print(f"================|  Menu  |====================")
     opcao = int(input("""[1] Somar
 [2] Multiplicar
@@ -37,5 +37,11 @@ Sua opção: """))
             print(f"O maior valor digitado foi {valor_1}")
         else:
             print(f"O maior valor digitado foi {valor_2}")
+    elif(opcao == 4):
+        print(f"================| Inicio |==================")
+        valor_1 = int(input(f"Digite um valor: "))
+        valor_2 = int(input(f"Digite mais um valor: "))
+    else:
+        print(f"Opção inválida, tente novamente!")
 
 print(f"\033[1;31;40mSaindo do programa\033[m...")
