@@ -19,4 +19,5 @@ while(resposta != 'n'):
         primeiro_termo += razao
 
     print("Acabou!")
-    resposta = str(input(f"Deseja realizar outra Progressão Aritmética? [S/N]")).lower().strip()
+    resposta = str(input(f"Deseja realizar outra Progressão Aritmética? [S/N] ")).lower().strip()
+print(f"Programa encerrado!")

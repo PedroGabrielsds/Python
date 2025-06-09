@@ -6,7 +6,6 @@
 
 resposta = "S"
 
-
 while(resposta != "N"):
     numero = int(input("Sequência de Fibonacci de "))
     t1 = 0
