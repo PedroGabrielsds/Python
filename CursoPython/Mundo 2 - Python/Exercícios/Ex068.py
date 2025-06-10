@@ -32,4 +32,3 @@ while(derrota == 0):
         print(f"Você venceu!")
         print(f"{verificacao} é Ímpar!")
         vitoria += 1
-    
