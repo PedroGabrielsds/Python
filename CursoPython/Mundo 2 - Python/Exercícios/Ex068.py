@@ -22,13 +22,11 @@ while(derrota == 0):
 
     print(f"-" * 10)
     verificacao = computador + numero
-    print(f"Você jogou {numero} e o computador jogou {computador}, total é {verificacao}")
-    print(f"-" * 10)
-    if((verificacao % 2 == 0) and (par_impar == "p")):
-        print(f"Você venceu!")
-        print(f"{verificacao} é Par!")
-        vitoria += 1
-    elif((verificacao % 2 != 0) and (par_impar == "i")):
-        print(f"Você venceu!")
-        print(f"{verificacao} é Ímpar!")
-        vitoria += 1
+    print(f"Você jogou {numero} e o computador jogou {computador}.", end=" ")
+    if(verificacao % 2 == 0):
+        print(f"Total é {verificacao} que é Par!")
+        print(f"-" * 10)
+    else:
+        print(f"Total é {verificacao} que é Ímpar!")
+        print(f"-" * 10)
+        
