@@ -21,9 +21,9 @@ while(resposta != "n"):
         print(f"{f'\033[1;{cor};40mPartida nº{partida}\033[m':=^43}")
         par_impar = str(input(f"\033[1;33mPar ou Ímpar\033[m: [P/I] ")).lower().strip()[0]
         if(par_impar == "p"):
-            numero = int(input(f"Você é par, \033[0;33mdigite um número\033[m: "))
+            numero = int(input(f"Você é par, \033[1;33mdigite um número\033[m: "))
         else:
-            numero = int(input(f"Você é ímpar, \033[0;33mdigite um número\033[m: "))
+            numero = int(input(f"Você é ímpar, \033[1;33mdigite um número\033[m: "))
         print(f"-" * 30)
         verificacao = computador + numero
         print(f"Você jogou {numero} e o computador jogou {computador}.", end=" ")
@@ -31,7 +31,7 @@ while(resposta != "n"):
             print(f"Total é {verificacao} que é Par!")
             print(f"-" * 30)
             if(par_impar == "p"):
-                print(f"\033[1;{cor};mVocê Venceu\033[m!")
+                print(f"\033[1;{cor};40mVocê Venceu\033[m!")
                 print(f"\033[1;34mVamos jogar novamente\033[m", end="")
                 cor_pontos = 30
                 vitoria += 1
