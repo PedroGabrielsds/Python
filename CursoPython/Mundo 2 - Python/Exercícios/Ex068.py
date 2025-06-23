@@ -31,7 +31,7 @@ while(resposta != "n"):
             print(f"Total é {verificacao} que é Par!")
             print(f"-" * 30)
             if(par_impar == "p"):
-                print(f"\033[1;{cor};40mVocê Venceu\033[m!")
+                print(f"\033[1;32;40mVocê Venceu\033[m!")
                 print(f"\033[1;34mVamos jogar novamente\033[m", end="")
                 cor_pontos = 30
                 vitoria += 1
