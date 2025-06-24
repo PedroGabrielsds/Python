@@ -16,7 +16,7 @@ while(numero > 0):
         break
     else:
         contador = 1
-        while(contador < 10):
+        while(contador < 11):
             print(f"{f"{numero} X {contador} = {numero * contador}":^20}")
             contador += 1
         print(f"-=" * 10)
