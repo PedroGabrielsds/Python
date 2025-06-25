@@ -5,54 +5,44 @@
 
 #OBS: Considere que o caixa possui cédulas de R$50, R$20, R$10 e R$1.
 
-valor = 0
+nota_cinquenta = 50
+qtd_nota_cinquenta = 0
+nota_vinte = 20
+qtd_nota_vinte = 0
+nota_dez = 10
+qtd_nota_dez = 0
+nota_um = 1
+qtd_nota_um = 0
+mackbank_icon = "MackBank"
+mackbank_icon_colored = f"\033[1;31;49m{mackbank_icon}\033[m"
 
-print(f"=" * 17)
-print(f"{'\033[1;31;40mMackBank\033[m':=^30}")
+print(f"=" * 30)
+print(f"{mackbank_icon_colored:^43}")
+print(f"=" * 30)
 
-opcao = int(input(f"""[1] Sacar
-[2] Depositar
-[3] Extrato
-[4] Sair
-Escolha uma opção: """))
+valor = int(input(f"Qual valor deseja sacar? R$"))
+if(valor >= 1):
+    while(valor > 0):
+        while(valor >= 50):
+            valor -= nota_cinquenta
+            qtd_nota_cinquenta += 1
+        while(valor >= 20):
+            valor -= nota_vinte
+            qtd_nota_vinte += 1
+        while(valor >= 10):
+            valor -= nota_dez
+            qtd_nota_dez += 1
+        while(valor >= 1):
+            valor -= nota_um
+            qtd_nota_um += 1
 
-if(opcao == 1):
-    while(valor < 0):
-        nota_cinquenta = 0
-        nota_vinte = 0
-        nota_dez = 0
-        nota_um = 0
-        valor = int(input(f"Qual valor a ser sacado? R$"))
-        #sacar = int(input(f"""          Sacar em cédulas de:
-          #[1] R$50
-          #[2] R$20
-          #[3] R$10
-          #[4] R$1
-          #Escolha uma opção: """))
-        if(valor >= 1):
-            while(valor >= 50):
-                valor -= 50
-                nota_cinquenta += 1
-                #if(valor <= 50):
-
-            while(valor >= 20):
-                valor -= 20
-                nota_vinte += 1
-                #if(valor < 20):
-
-            while(valor >= 10):
-                valor -= 10
-                nota_dez += 1
-                #if(valor < 10):
-
-            while(valor >= 1):
-                valor -= 1
-                nota_um += 1
-                #if(valor < 1):
-        else:
-            valor = float(input(f"Esse valor não pode ser sacado! Tente outro valor de saque: "))
-else:
-    print(f"Opção \033[1;31mindisponível\033[m no momento, por favor tente outra opção!")
-
-
-
+print("-=" * 15)
+if(qtd_nota_cinquenta != 0):
+    print(f"Total de {qtd_nota_cinquenta} cédulas de R$50")
+if(qtd_nota_vinte != 0):
+    print(f"Total de {qtd_nota_vinte} cédulas de R$20")
+if(qtd_nota_dez != 0 ):
+    print(f"Total de {qtd_nota_dez} cédulas de R$10")
+if(qtd_nota_um != 0):
+    print(f"Total de {qtd_nota_um} cédulas de R$1")
+print("=" * 30)

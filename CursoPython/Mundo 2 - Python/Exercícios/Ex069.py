@@ -22,22 +22,25 @@ while(resposta != "N"):
     nome = str(input(f"Nome: ")).lower().strip()
     idade = int(input(f"Idade: "))
     sexo = str(input(f"Sexo: [M/F]")).upper().strip()[0]
-    if((sexo != "M") and (sexo != "F")):
-        print(f"\033[1;31;40mOpção inválida, tente novamente\033[m!")
-        sexo = str(input(f"Sexo: [M/F]")).upper().strip()
-    if(idade >= 18):
+    while(sexo != 'M' and sexo != 'F'):
+        sexo = str(input(f"Sexo: [M/F]")).upper().strip()[0]
+
+    if (idade >= 18):
         maior_dezoito += 1
         unico_maior = nome
 
-    if(sexo == "M"):
+    if (sexo == "M"):
         qtd_homens += 1
         unico_homem = nome
 
-    if(sexo == "F" and idade < 20):
+    if (sexo == "F" and idade < 20):
         qtd_mulheres_menores += 1
         unica_mulher_menor = nome
 
     resposta = str(input(f"Deseja cadastrar mais pessoas? [S/N]")).upper().strip()[0]
+    while(resposta != "S" and resposta != "N"):
+        print(f"Opção \033[1;31minválida\033[m, tente novamente!")
+        resposta = str(input(f"Deseja cadastrar mais pessoas? [S/N]")).upper().strip()[0]
 
 print("=" * 40)
 if(qtd_homens > 1):

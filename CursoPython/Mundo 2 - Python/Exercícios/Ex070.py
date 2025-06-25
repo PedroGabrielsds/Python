@@ -16,7 +16,7 @@ total = 0
 resposta = "S"
 
 while(resposta != "N"):
-    print(f"{"Mack-Ado":=^30}")
+    print(f"{"\033[1;31;40mMack-Ado\033[m":=^30}")
     compras += 1
     produto = str(input(f"Nome do produto: ")).strip()
     preco = float(input(f"Preço: R$"))
@@ -30,10 +30,18 @@ while(resposta != "N"):
 
     if(preco > 1000):
         maior_mil += 1
+        produto_maior_mil = produto
 
     resposta = str(input(f"Deseja comprar mais produtos: [S/N] ")).upper().strip()[0]
 
 print("=" * 30)
 print(f"O total de suas compras é: R${total:.2f}")
-print(f"{maior_mil} produtos custam mais de R$1.000!")
-print(f"{nome_mais_barato} foi o produto mais barato desta compra, custando R${mais_barato:.2f}!")
+if(maior_mil > 1):
+    print(f"{maior_mil} produtos custam mais de R$1.000!")
+else:
+    print(f"{produto_maior_mil} foi o único produto acima de R$1.000!")
+
+if(compras == 1):
+    print(f"")
+else:
+    print(f"{nome_mais_barato} foi o produto mais barato desta compra, custando R${mais_barato:.2f}!")
