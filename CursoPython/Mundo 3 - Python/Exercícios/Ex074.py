@@ -10,17 +10,12 @@ contador = 0
 
 numeros_aleatorios = (randint(1,10), randint(1, 10), randint(1, 10), randint(1, 10), randint(1, 10))
 
-print(f"Números gerados foram:", numeros_aleatorios)
-for numero in numeros_aleatorios:
-    contador += 1
-    if(contador == 1):
-        menor = numero
-        maior = numero
+print(f"Os números gerados foram: ", end="")
+for posicao, numero_aleatorio in enumerate(numeros_aleatorios):
+    if(posicao != 4):
+        print(f"{numero_aleatorio}", end=", ")
     else:
-        if(numero > maior):
-            maior = numero
-        elif(numero < menor):
-            menor = numero
+        print(f"{numero_aleatorio}", end=" ")
 
-print(f"O maior número gerado é: {maior}")
-print(f"O menor número gerado é: {menor}")
+print(f"\nO maior número sorteado foi {max(numeros_aleatorios)}")
+print(f"O menor número gerado foi {min(numeros_aleatorios)}")
