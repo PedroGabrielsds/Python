@@ -12,6 +12,5 @@ print(f"{'Produtos':<25}", end="Preço\n")
 print("=" * 30)
 
 for produto in range(0, len(tupla_produtos), 2):
-    print(f"{tupla_produtos[produto]:.<24}", end="R$")
-    for preco in range(1, len(tupla_produtos), 2):
-        print(f"{tupla_produtos[preco]}\n")
+    print(f"{tupla_produtos[produto]:.<24}", end=f"R${tupla_produtos[contador + 1]}\n")
+    contador += 2
