@@ -48,10 +48,9 @@ if(par_1 == 0 and par_2 == 0 and par_3 == 0 and par_4 == 0):
 else:
     for posicao, numero in enumerate(tupla):
         if(numero > 0 and numero % 2 == 0):
-            if(posicao == 3):
-                print(f"{numero}")
+            if(posicao == 2 and tupla[3] % 2 != 0):
+                print(f"{numero}", end="")
+            elif(posicao == 3):
+                print(f"{numero}", end="")
             else:
-                if(posicao == 2 and tupla[3] % 2 == 0):
-                    print(f"{numero}", end=", ")
-                else:
-                    print(f"{numero}", end=" ")
+                print(f"{numero}", end=", ")
