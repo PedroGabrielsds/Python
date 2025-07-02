@@ -6,8 +6,10 @@
 tupla_palavras = ('Ponche', 'Amazon', 'Fiat', 'Chevrolet', 'Ford', 'Porsche', 'Mercedes', 'Cadeira', 'Carro', 'Pizza',
                   'Hamburguer', 'Salgado', 'Doce', 'Parede', 'Musica', 'Jogo')
 
-
 for palavra in tupla_palavras:
-    palavra_dividida = palavra.lower().split()
-    print(palavra_dividida[0] [palavra_dividida.count('a')])
-    #print(f"A palavra: {palavra} contém {contagem_vogais}, sendo elas: {}")
+    print(f"Em \033[1;39m{palavra}\033[m", end=" contém: ")
+    palavra = palavra.lower()
+    for letra in palavra:
+        if(letra in "aeiou"):
+            print(f"\033[1;39m{letra}\033[m, ", end="")
+    print("")
