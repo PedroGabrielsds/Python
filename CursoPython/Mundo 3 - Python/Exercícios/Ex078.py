@@ -13,6 +13,8 @@ while(len(numeros) < 5):
     numeros.append(int(input(f"Digite o {contador}º valor: ")))
     contador += 1
 
+print(f"=-" * 30)
+
 for posicao, valor in enumerate(numeros):
     if(valor == max(numeros)):
         if(maior_valor >= 1):
