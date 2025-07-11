@@ -20,7 +20,7 @@ for posicao, valor in enumerate(numeros):
         if(maior_valor >= 1):
             print(end=f", {posicao}")
         else:
-            print(f"\nO maior valor digitado foi {max(numeros)} localizado na posição: {posicao + 1}", end=" ")
+            print(f"\On maior valor digitado foi {max(numeros)} localizado na posição: {posicao + 1}", end=" ")
         maior_valor += 1
     if(valor == min(numeros)):
         if(menor_valor >= 1):
