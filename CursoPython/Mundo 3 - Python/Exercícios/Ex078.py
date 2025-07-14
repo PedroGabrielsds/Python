@@ -19,4 +19,3 @@ for contador in range(0, len(numeros)):
     for posicao, valor in enumerate(numeros):
         if(valor == max(numeros)):
             print(f"O MAIOR valor digitado foi {max(numeros)} localizado na posição: ", end="")
-    
