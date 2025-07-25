@@ -19,6 +19,7 @@ while(resposta != "n"):
     contador += 1
     if(5 in numeros):
         qtd_cincos += 1
+        print(5)
     resposta = str(input(f"Deseja digitar mais um número? [S/N] ")).lower().strip()[0]
 
 numeros.sort(reverse=True)
@@ -28,6 +29,6 @@ print(f"A lista ordenada em ordem decrescente: {numeros}")
 if(qtd_cincos == 1):
     print(f"O número 5 está presente na lista!")
 elif(qtd_cincos > 1):
-    print(f"O número 5 está presente e foi digitado \033[1m{qtd_cincos}\033[m vezes!")
+    print(f"O número 5 está presente e foram digitados \033[1m{qtd_cincos}\033[m vezes!")
 else:
     print(f"O número 5 não está presente!")
