@@ -25,14 +25,14 @@ for posicao, valor in enumerate(numeros):
 
 print(f"Você digitou os valores {numeros}")
 if(len(posicoes_max) > 1):
-    print(f"O maior valor digitado foi: \033[1;37m{max(numeros)}\033[m {plural} {", ".join(map(str, posicoes_max))}")
+    print(f"O maior valor digitado foi: \033[1;37m{max(numeros)}\033[m {plural}: {", ".join(map(str, posicoes_max))}")
 elif(len(posicoes_max) == 1):
-    print(f"O maior valor digitado foi: \033[1;37m{max(numeros)}\033[m {singular} {", ".join(map(str, posicoes_max))}")
+    print(f"O maior valor digitado foi: \033[1;37m{max(numeros)}\033[m {singular}: {", ".join(map(str, posicoes_max))}")
 
 if(len(posicoes_min) > 1):
-    print(f"O menor valor digitado foi: \033[1;37m{min(numeros)}\033[m {plural} {", ".join(map(str, posicoes_min))}")
+    print(f"O menor valor digitado foi: \033[1;37m{min(numeros)}\033[m {plural}: {", ".join(map(str, posicoes_min))}")
 elif(len(posicoes_min) == 1):
-    print(f"O menor valor digitado foi: \033[1;37m{min(numeros)}\033[m {singular} {", ".join(map(str, posicoes_min))}")
+    print(f"O menor valor digitado foi: \033[1;37m{min(numeros)}\033[m {singular}: {", ".join(map(str, posicoes_min))}")
 
 #Primeira tentativa:
 # for posicao, valor in enumerate(numeros):
