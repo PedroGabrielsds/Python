@@ -10,25 +10,44 @@
 
 resposta = "S"
 qtd_cadastros = 0
+cadastros = []
+pessoas = []
+
 
 while(resposta != "N"):
     qtd_cadastros += 1
-    nome = str(input(f"Nome: "))
-    peso = float(input(f"Peso: "))
-    if(qtd_cadastros == 1):
-        pesado = peso
-        leve = peso
-    elif(peso >= pesado):
-        pesado = peso
-    elif(peso <= leve):
-        leve = peso
+    # if(qtd_cadastros == 1):
+    #     pesado = peso
+    #     leve = peso
+    # elif(peso >= pesado):
+    #     pesado = peso
+    # elif(peso <= leve):
+    #     leve = peso
+    pessoas.append(str(input(f"Nome: ")))
+    pessoas.append(float(input(f"Peso: ")))
+    cadastros.append(pessoas[:])
+    pessoas.clear()
 
     resposta = str(input(f"Deseja cadastrar mais alguém? ")).upper().split()[0]
     while(resposta not in "NS"):
         resposta = str(input(f"Deseja cadastrar mais alguém? ")).upper().split()[0]
+        if (resposta == "N"):
+            break
 
-    if(resposta == "N"):
-        break
 
-print(f"O maior peso registrado é: {pesado}")
-print(f"O menor peso registrado é: {leve}")
+
+print(cadastros)
+print(cadastros[0])
+print(cadastros[0][1])
+
+for posicao, pessoa in enumerate(cadastros):
+    if(posicao == 0):
+        maior_peso = pessoa[1]
+        menor_peso = pessoa[1]
+    elif(pessoa[1] >= maior_peso):
+        maior_peso = pessoa[1]
+    elif(pessoa[1] <= menor_peso):
+        menor_peso = pessoa[1]
+
+
+    print(f"A pessoas mais pesadas pesam {maior_peso} e são: {}")
