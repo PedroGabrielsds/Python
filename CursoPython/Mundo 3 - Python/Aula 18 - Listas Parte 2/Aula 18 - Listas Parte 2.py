@@ -11,12 +11,12 @@
 # teste.append("Pedro")
 # teste.append(21)
 # galera = []
-# galera.append(teste[:])
+# galera.append(teste)
 # #Realiza uma ligação entre as listas
 # teste[0] = "Maria"
 # teste[1] = 22
 # galera.append(teste[:])
-# #Realiza uma cópia
+# #Realiza uma cópia da lista e adiciona em outra!
 # print(galera)
 
 galera = list()
