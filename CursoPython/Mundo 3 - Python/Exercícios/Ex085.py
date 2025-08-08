@@ -10,17 +10,14 @@ impares = []
 for contador in range(1, 8):
     valores.append(int(input(f"Digite o {contador}º valor: ")))
     if(valores[0] % 2 == 0):
-        pares.append(valores[:])
+        pares.append(valores[0])
     else:
-        impares.append(valores[:])
+        impares.append(valores[0])
+    valores.clear()
+    pares.sort()
+    impares.sort()
 
-print(valores[0])
+print("-=" * 25)
 
-# valores.append(pares[:])
-# valores.append(impares[:])
-# print(pares)
-# print(impares)
-# for valor in valores:
-#     print(valor, end=" ")
-#     # print(f"Par: {pares}")
-#     # print(f"Impar : {impares}")
+print(f"Os números pares digitados foram: {pares}")
+print(f"Os números ímpares digitados foram: {impares}")
