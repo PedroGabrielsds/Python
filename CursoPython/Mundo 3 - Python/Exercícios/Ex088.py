@@ -16,13 +16,11 @@ print("-" * 30)
 
 jogos = int(input(f"Quantos jogos deseja fazer? "))
 
-while contador <= jogos:
-    contador += 1
-    for c in range(1, 7):
-        print(contador)
-        num = randint(1,60)
-        if(num not in auxiliar):
-            auxiliar.append(num)
+for contador in range(1, jogos + 1):
+    while len(auxiliar) != 6:
+        numero = randint(1, 60)
+        if(numero not in auxiliar):
+            auxiliar.append(numero)
         if(len(auxiliar) == 6):
             palpites.append(auxiliar[:])
     auxiliar.clear()
@@ -41,5 +39,3 @@ for jogo in palpites:
 print(f"-=" * 4, end=" ")
 print(f" < BOA SORTE! > ", end=" ")
 print(f"-=" * 4)
-
-#consertar lógica da geração de jogos
