@@ -17,6 +17,6 @@ for c in range(0, 3):
 
 print("-=" * 25)
 
-print(f"""[  {fileira1[0]}  ] [  {fileira1[1]}  ] [  {fileira1[2]}  ]
-[  {fileira2[0]}  ] [  {fileira2[1]}  ] [  {fileira2[2]}  ]
-[  {fileira3[0]}  ] [  {fileira3[1]}  ] [  {fileira3[2]}  ]""")
+print(f"""[{fileira1[0]:^6}] [{fileira1[1]:^6}] [{fileira1[2]:^6}]
+[{fileira2[0]:^6}] [{fileira2[1]:^6}] [{fileira2[2]:^6}]
+[{fileira3[0]:^6}] [{fileira3[1]:^6}] [{fileira3[2]:^6}]""")
