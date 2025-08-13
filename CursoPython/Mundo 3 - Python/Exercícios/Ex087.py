@@ -24,9 +24,9 @@ for c in range(0, 3):
 
 print("-=" * 25)
 
-print(f"""[  {fileira1[0]}  ] [  {fileira1[1]}  ] [  {fileira1[2]}  ]
-[  {fileira2[0]}  ] [  {fileira2[1]}  ] [  {fileira2[2]}  ]
-[  {fileira3[0]}  ] [  {fileira3[1]}  ] [  {fileira3[2]}  ]
+print(f"""[{fileira1[0]:^5}] [{fileira1[1]:^5}] [{fileira1[2]:^5}]
+[{fileira2[0]:^5}] [{fileira2[1]:^5}] [{fileira2[2]:^5}]
+[{fileira3[0]:^5}] [{fileira3[1]:^5}] [{fileira3[2]:^5}]
 A soma dos valores \033[1mpares\033[m é: {soma_pares}
 A soma dos valores da \033[1mterceira coluna\033[m é: {fileira1[2] + fileira2[2] + fileira3[2]}
 O maior valor da segunda \033[1mLinha é\033[m {max(fileira2)}""")
