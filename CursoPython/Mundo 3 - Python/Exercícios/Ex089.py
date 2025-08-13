@@ -18,7 +18,7 @@ while resposta != "N":
     resposta = str(input(f"Deseja continuar? [S/N] ")).strip().upper()[0]
     while resposta not in "SN":
         resposta = str(input(f"Deseja continuar? [S/N] ")).strip().upper()[0]
-        
+
     auxiliar.clear()
 
 print("=-" * 40)
@@ -30,9 +30,9 @@ print(f"-" * 30)
 for posicao, aluno in enumerate(boletim):
     alunos.append(posicao)
     media = (aluno[1] + aluno[2]) / 2
-    print(f"{f"{posicao}":<4}", end="")
-    print(f"{f"{aluno[0]}":<20}", end="")
-    print(f"{media:.2f}")
+    print(f"{f"\033[1m{posicao}\033[m":<4}", end="")
+    print(f"{f"\033[1m{aluno[0]}\033[m":<20}", end="")
+    print(f"\033[1m{media:.2f}\033[m")
 
 print("-" * 30)
 aluno = int(input(f"Deseja ver a nota de qual aluno(a)? (999 interrompe!) "))
@@ -41,7 +41,7 @@ while aluno != 999:
         print(f"\033[1;31mAluno inexistente\033[m, tente novamente!")
         aluno = int(input(f"Deseja ver a nota de qual aluno(a)? (999 interrompe!) "))
     else:
-        print(f"Notas de {boletim[aluno][0]} são {boletim[aluno][1]}, {boletim[aluno][2]}")
+        print(f"Notas de \033[1m{boletim[aluno][0]}\033[m são \033[m{boletim[aluno][1]}\033[m, \033[1m{boletim[aluno][2]}\033[m")
         print("-" * 35)
         aluno = int(input(f"Deseja ver a nota de qual aluno(a)? (999 interrompe!) "))
 
