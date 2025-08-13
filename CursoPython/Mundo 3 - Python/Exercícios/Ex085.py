@@ -4,6 +4,7 @@
 #matenha separados os valores pares e ímpares. No final, mostre os valores pares e ímpares em ordem crescente.
 
 valores = []
+#Forma feita na correção: valores = [[], []]
 pares = []
 impares = []
 
