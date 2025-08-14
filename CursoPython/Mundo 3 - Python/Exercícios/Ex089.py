@@ -21,18 +21,18 @@ while resposta != "N":
 
     auxiliar.clear()
 
-print("=-" * 40)
-print(f"{f"Nº":<4}", end="")
-print(f"{f"NOME":<20}", end="")
+print("=-" * 30)
+print(f"{"Nº":<4}", end="")
+print(f"{"NOME":<20}", end="")
 print(f"MÉDIA")
 
 print(f"-" * 30)
 for posicao, aluno in enumerate(boletim):
     alunos.append(posicao)
     media = (aluno[1] + aluno[2]) / 2
-    print(f"{f"\033[1m{posicao}\033[m":<4}", end="")
-    print(f"{f"\033[1m{aluno[0]}\033[m":<20}", end="")
-    print(f"\033[1m{media:.2f}\033[m")
+    print(f"\033[1m{posicao:<4}\033[m", end="")
+    print(f"\033[1m{aluno[0]:<20}\033[m", end="")
+    print(f"{media:.1f}")
 
 print("-" * 30)
 aluno = int(input(f"Deseja ver a nota de qual aluno(a)? (999 interrompe!) "))
