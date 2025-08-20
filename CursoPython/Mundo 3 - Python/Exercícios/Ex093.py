@@ -36,3 +36,4 @@ for partida in gols:
     else:
         print(f"gol.")
     contador += 1
+print(f"Foi um total de {total} gols.")
