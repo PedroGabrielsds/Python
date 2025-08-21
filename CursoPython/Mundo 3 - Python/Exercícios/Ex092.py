@@ -23,9 +23,9 @@ if(informaçoes['ctps'] == 0):
             print(f"{key} tem o valor {value}")
 
 else:
-    print(f"-=" * 20)
     informaçoes['contratacao'] = int(input(f"Ano de Contratação: "))
     informaçoes['salario'] = float(input(f"Salário: R$"))
     informaçoes['aposentadoria'] = ((35 - (ano_atual - informaçoes['contratacao'])) + informaçoes['idade'])
+    print(f"-=" * 20)
     for key, value in informaçoes.items():
         print(f"{key} tem o valor {value}")
