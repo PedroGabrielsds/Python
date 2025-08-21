@@ -5,7 +5,9 @@
 #A) Quantas pessoas foram cadastradas
 #B) A média de idade do grupo.
 #C) Uma lista com todas as mulheres.
-#D) Uma lista com todas as pessoas com idade acima da média.
+#D) Uma lista com todas as pessoas com idade acima da média
+
+#ADICIONAR TRATAMENTO DE ERRO PARA DIFERENTES TIPOS DE SEXO!!!!
 
 grupo = []
 pessoa = {}
