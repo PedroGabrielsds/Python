@@ -16,6 +16,7 @@ while contador <= partidas:
     gols.append(valor)
     contador += 1
     total += valor
+    #Existe o operador sum() que faz a soma dos elementos presentes em um objeto!
 
 informacoes['gols'] = gols
 informacoes['total'] = total
