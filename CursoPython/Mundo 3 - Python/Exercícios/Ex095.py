@@ -45,18 +45,18 @@ for posicao, player in enumerate(jogadores):
         print(f"{player['gols']}", end="")
         print(f"{player['total']:>14}")
 
-dado = int(input(f"Mostrar dados de qual jogador? (999 termina)"))
+dado = int(input(f"Mostrar dados de qual jogador? (999 termina) "))
 while(dado != 999):
     if dado not in posicoes:
         print(f"\033[1;31mERRO\033[m! \033[1;33mNão existe jogador com código {dado}\033[m! Tente novamente!")
     else:
-        print(f"-- Levantamento do jogador {jogadores[dado-1]['nome']}:")
+        print(f"-- Levantamento do jogador {jogadores[dado-1]['nome']}: ")
         for gol in range(0, len(jogadores[dado-1]['gols'])):
             print(f"{f"No jogo {gol} fez {jogadores[dado-1]['gols'][gol]} gols.":>24}")
     print("--" * 25)
-    dado = int(input(f"Mostrar dados de qual jogador? (999 termina)"))
+    dado = int(input(f"Mostrar dados de qual jogador? (999 termina) "))
 
-print("<< Finalizando", end="")
+print("<<  Finalizando", end="")
 for contador in range(1, 3 + 1):
     if(contador < 3):
         print(f"\033[1m.\033[m", end="")
