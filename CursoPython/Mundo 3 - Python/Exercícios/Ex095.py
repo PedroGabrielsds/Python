@@ -30,7 +30,7 @@ while resposta != "N":
     resposta = str(input(f"Deseja continuar? [S/N] ")).upper().strip()[0]
     while resposta not in "NS":
         resposta = str(input(f"\033[1;31mOpção Incorreta\033[m! Deseja continuar? [S/N] ")).upper().strip()[0]
-    print("-" * 20)
+    print("--" * 25)
 
 print(f"{f"Código":<10}", end="")
 print(f"{f'Nome':<15}", end="")
