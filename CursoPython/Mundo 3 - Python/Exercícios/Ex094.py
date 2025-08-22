@@ -21,6 +21,9 @@ while resposta != "N":
     cadastros += 1
     pessoa['nome'] = str(input(f"Nome: ")).strip().title()
     pessoa['sexo'] = str(input(f"Sexo [M/F]: ")).upper().strip()[0]
+    while(pessoa['sexo'] not in "MF"):
+        print(f"Erro! Por favor, digite apenas M ou F.")
+        pessoa['sexo'] = str(input(f"Sexo [M/F]: "))
     pessoa['idade'] = int(input(f"Idade: "))
     idades += pessoa['idade']
     if(pessoa['sexo'] == "F"):
@@ -30,6 +33,7 @@ while resposta != "N":
 
     resposta = str(input(f"Deseja continuar [S/N]: ")).upper().strip()[0]
     while resposta not in "SN":
+        print(f"Erro! Por favor, digite apenas S ou N.")
         resposta = str(input(f"Deseja continuar [S/N]: ")).upper().strip()[0]
 
 media = idades / len(grupo)
