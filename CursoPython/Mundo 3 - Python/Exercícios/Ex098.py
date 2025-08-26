@@ -14,16 +14,25 @@ def linha():
     print('-' * 20)
 
 def contador(inicio, fim, passo):
+    if (passo == 0):
+        passo = 1
+    elif (passo < 0):
+        passo *= -1
     print(f"Contagem de {inicio} até {fim} de {passo} em {passo}")
+
+
     if((inicio < fim) or (passo < 0)):
         for cont in range(inicio, fim + 1, passo):
             print(cont, end=" ")
-            sleep(0.5)
         print(f"Fim")
     elif(inicio > fim):
-        for cont in range(inicio, fim + 1, -passo):
+        # for cont in range(inicio, fim, -passo):
+        #     print(cont, end=" ")
+            # sleep(0.5)
+        cont = inicio
+        while cont >= fim:
             print(cont, end=" ")
-            sleep(0.5)
+            cont -= passo
         print(f"Fim")
 
 #Programa Principal
