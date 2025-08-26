@@ -19,6 +19,9 @@ def escreva(txt):
 
 #Programa Principal
 frase = 1
-while frase != 0:
-    frase = str(input(f"Digite um título: "))
-    escreva(frase)
+while frase != "stop":
+    frase = str(input(f"Digite um título: (Stop cancela) "))
+    if(frase == "stop"):
+       print(f"\033[1;31mFinalizando...\033[m")
+    else:
+        escreva(frase)
