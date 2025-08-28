@@ -56,22 +56,22 @@
 
 #=-=-=-=-=--===-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 #Retorno de Resultados
-def somador(a = 0, b = 0, c = 0):
-    """
-    -> Faz a soma de três valores e mostra o resultado na tela.
-    :param a: O primeiro valor
-    :param b: O segundo valor
-    :param c: O valor terceiro
-    :return: Sem retorno
-    Função Criada por Pedro Gabriel do STF
-    """
-    soma = a + b + c
-    return soma
-    #print(f"{a} + {b} + {c} = {soma}")
-
-soma_1 = somador(1, 2, 3)
-soma_2 = somador(5, 3, 2)
-soma_3 = somador(10, 2, 6)
-print(soma_1)
-print(soma_2)
-print(soma_3)
+# def somador(a = 0, b = 0, c = 0):
+#     """
+#     -> Faz a soma de três valores e mostra o resultado na tela.
+#     :param a: O primeiro valor
+#     :param b: O segundo valor
+#     :param c: O valor terceiro
+#     :return: Sem retorno
+#     Função Criada por Pedro Gabriel do STF
+#     """
+#     soma = a + b + c
+#     return soma
+#     #print(f"{a} + {b} + {c} = {soma}")
+#
+# soma_1 = somador(1, 2, 3)
+# soma_2 = somador(5, 3, 2)
+# soma_3 = somador(10, 2, 6)
+# print(soma_1)
+# print(soma_2)
+# print(soma_3)
