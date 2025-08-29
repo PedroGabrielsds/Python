@@ -6,6 +6,13 @@
 from datetime import date
 
 def voto(ano_nascimento):
+        """
+        Esta função é usada para saber se o voto do usuário é ou não necessário de acordo com a idade o usuário!
+
+        :param ano_nascimento: Recebe o ano de nascimento para calcular a idade do usuário.
+        :return: Sem retorno
+        Função Criada Por Mack
+        """
         idade = (date.today().year - ano_nascimento)
         if(idade < 18):
             print(f"Com {idade} anos: \033[1;31mNão vota\033[m!")
