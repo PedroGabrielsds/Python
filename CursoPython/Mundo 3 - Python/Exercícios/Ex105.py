@@ -10,3 +10,23 @@
 #- A situação (opcional)
 
 #Adicione também as DOCSTRINGS da função
+
+def notas(* notas):
+    boletim = []
+    soma_notas = 0
+
+    soma_notas += notas
+
+    boletim['total'] = len(notas)
+    boletim['maior'] = max(notas)
+    boletim['menor'] = min(notas)
+
+    media = soma_notas / len(notas)
+    boletim['media'] = media
+
+    return boletim
+
+
+#Programa Principal
+resultado = notas(5.5, 9.5, 10, 6.5)
+print(resultado)
