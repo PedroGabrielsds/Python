@@ -4,3 +4,10 @@
 #Só que fazendo a validação para aceitar apenas um valor numérico.
 
 #Ex: n - leiaint("Digite um n: ")
+
+n = input(f"Digite um valor: ")
+
+if(n.isnumeric()):
+    print(f"O valor é válido!!")
+else:
+    print(f"O valor não é válido!!")
