@@ -5,9 +5,19 @@
 
 #Ex: n - leiaint("Digite um n: ")
 
-n = input(f"Digite um valor: ")
+def leiaint(pergunta):
+    """
+    Função Leiaint funciona como um input que só aceita números inteiros!
+    :param pergunta: usa a mensagem passada pelo código principal para ser usada no input.
+    :return: Sem retorno
+    """
+    controle = False
+    while(controle == False):
+        n = input(pergunta)
+        if(n.isnumeric() == False):
+            print(f"\033[1;31mError, Não foi digitado um número!!\033[m")
+        else:
+            controle = True
 
-if(n.isnumeric()):
-    print(f"O valor é válido!!")
-else:
-    print(f"O valor não é válido!!")
+#Programa Principal
+pergunta = leiaint("Digite um número: ")
