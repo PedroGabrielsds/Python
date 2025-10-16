@@ -9,7 +9,7 @@ def leiaint(pergunta):
     """
     Função Leiaint funciona como um input que só aceita números inteiros!
     :param pergunta: usa a mensagem passada pelo código principal para ser usada no input.
-    :return: Sem retorno
+    :return n: Retorna o valor n se for do tipo inteiro.
     """
     controle = False
     while(controle == False):
@@ -18,6 +18,8 @@ def leiaint(pergunta):
             print(f"\033[1;31mError, Não foi digitado um número!!\033[m")
         else:
             controle = True
+            return n
 
 #Programa Principal
 pergunta = leiaint("Digite um número: ")
+print(f"Você digitou o número: {pergunta}")
