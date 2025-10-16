@@ -12,6 +12,16 @@
 #Adicione também as DOCSTRINGS da função
 
 def notas(* notas):
+    """
+    A função notas deverá receber quatro notas e mostrar as seguintes informações:
+    #- Quantidade de notas
+    #- A maior nota
+    #- A menor nota
+    #- A média da turma
+    #- A situação (opcional)
+    :param notas: Recebe uma lista de quatro notas.
+    :return: Retorna o boletim com as informações citadas a cima.
+    """
     boletim = []
     soma_notas = 0
 
