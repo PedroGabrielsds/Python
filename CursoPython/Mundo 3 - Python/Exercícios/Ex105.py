@@ -19,8 +19,9 @@ def notas(* valores, situacao = False):
     #- A menor nota
     #- A média da turma
     #- A situação (opcional)
-    :param
-    :return:
+    :param valores: Recebe as notas dos alunos
+    :param situacao: Marca se vai ou não mostrar a situação em que a turma se encontra
+    :return boletim: Retorna as informações das notas processadas
     """
 
     boletim = {}
@@ -46,3 +47,5 @@ def notas(* valores, situacao = False):
 
 resultado = notas(5.5, 6, 9.5, 7.2, situacao = True)
 print(resultado)
+
+help(notas)
