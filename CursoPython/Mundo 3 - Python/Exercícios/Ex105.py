@@ -11,7 +11,7 @@
 
 #Adicione também as DOCSTRINGS da função
 
-def notas(* notas):
+def notas(* valores, situacao = False):
     """
     A função notas deverá receber quatro notas e mostrar as seguintes informações:
     #- Quantidade de notas
@@ -19,24 +19,30 @@ def notas(* notas):
     #- A menor nota
     #- A média da turma
     #- A situação (opcional)
-    :param notas: Recebe uma lista de quatro notas.
-    :return: Retorna o boletim com as informações citadas a cima.
+    :param
+    :return:
     """
-    boletim = []
+
+    boletim = {}
+
     soma_notas = 0
+    for nota in valores:
+        soma_notas += nota
 
-    soma_notas += notas
-
-    boletim['total'] = len(notas)
-    boletim['maior'] = max(notas)
-    boletim['menor'] = min(notas)
-
-    media = soma_notas / len(notas)
-    boletim['media'] = media
-
+    boletim['Total'] = len(valores)
+    boletim['maior'] = max(valores)
+    boletim['menor'] = min(valores)
+    boletim['media'] = soma_notas / len(valores)
+    if(situacao == True):
+        if(boletim['media'] >= 7):
+            boletim['situacao'] = "Boa"
+        elif(boletim['media'] == 6.5):
+            boletim['media'] = "Razoável"
+        else:
+            boletim['situacao'] = "Precária"
+    print("---------------------------------")
     return boletim
 
 
-#Programa Principal
-resultado = notas(5.5, 9.5, 10, 6.5)
+resultado = notas(5.5, 6, 9.5, 7.2, situacao = True)
 print(resultado)
