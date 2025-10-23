@@ -23,7 +23,6 @@ def notas(* valores, situacao = False):
     :param situacao: Marca se vai ou não mostrar a situação em que a turma se encontra
     :return boletim: Retorna as informações das notas processadas
     """
-
     boletim = {}
 
     soma_notas = 0
@@ -37,7 +36,7 @@ def notas(* valores, situacao = False):
     if(situacao == True):
         if(boletim['media'] >= 7):
             boletim['situacao'] = "Boa"
-        elif(boletim['media'] == 6.5):
+        elif(boletim['media'] >= 5):
             boletim['media'] = "Razoável"
         else:
             boletim['situacao'] = "Precária"
@@ -45,7 +44,26 @@ def notas(* valores, situacao = False):
     return boletim
 
 
-resultado = notas(5.5, 6, 9.5, 7.2, situacao = True)
-print(resultado)
+estado = str(input(f"Deseja ver a situação da turma? [S/N] ")).upper().strip()[0]
+while(estado not in "SN"):
+    estado = str(input(f"Deseja ver a situação da turma? [S/N] ")).upper().strip()[0]
 
+if (estado == "S"):
+    estado = True
+else:
+    estado = False
+# while(resposta != "N"):
+#     dados.append(float(input(f"Digite a nota do aluno(a): ")))
+#     resposta = "A"
+#     while(resposta not in "SN"):
+#         resposta = str(input(f"Deseja adicionar mais notas? [S/N] ")).strip().upper()[0]
+#     if(resposta == "N"):
+#         estado = "A"
+#         while (estado not in "SN"):
+#             estado = str(input(f"Deseja ver a situação da turma no boletim? [S/N] ")).upper().strip()[0]
+
+
+
+resultado = notas(5, 6.5, 8, 9, situacao = estado)
+print(resultado)
 help(notas)
