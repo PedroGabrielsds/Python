@@ -7,23 +7,24 @@
 
 def escreva(frase):
     tamanho = len(frase)
-    print("\033[1;30;43m~\033[m" * tamanho)
+    print("~" * tamanho)
     print(f"{frase:^{tamanho}}")
-    print("\033[1;30;43m~\033[m" * tamanho)
+    print("~" * tamanho)
 
 def helplease():
     resposta = "F"
 
     while(resposta != "FIM"):
-        frase = escreva(f"\033[1;30;43mSISTEMA DE AJUDA PyHELP\033[m")
-        comando = str(input(f"Função ou Biblioteca > ")).lower().strip()
+        frase = escreva(f"\033[1;37;42mSISTEMA DE AJUDA PyHELP\033[m")
+        comando = str(input(f"Função ou Biblioteca >> ")).lower().strip()
         if(comando != "FIM"):
-            frase = escreva((f"Acessando o manual do comando '{comando}'"))
-            frase = escreva(f"\033[1;m{help(comando)}")
+            frase = escreva(f"\033[1;37;44mAcessando o manual do comando '{comando}'\033[m")
+            manual = help(comando)
+            print(manual)
+            # print(f"\033[1;30;47m{manual}\033[m")
         else:
             frase = escreva((f"\033[1;37;41mSaindo\033[m"))
             break
-
 
 #Programa Principal
 helplease()
