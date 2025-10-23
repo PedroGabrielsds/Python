@@ -48,6 +48,3 @@ print('\033[4;37;45mOlá, Mundo!\033[m')
 print("\033[1;31;40mMack\033[m")
 
 print(f"Olá \033[1;31;40mMack\033[m, seja bem vindo ao \033[1;34;43mPython\033[m!")
-
-
-
