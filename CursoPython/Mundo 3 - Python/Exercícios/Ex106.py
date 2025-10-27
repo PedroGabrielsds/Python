@@ -33,7 +33,7 @@ def helplease(comando):
 
 def mensagem(txt, cor=0):
     """
-    Função que escreve um texto ou mensagem com cores e linhas
+    Função que escreve um texto ou mensagem com cores e linhas de tamanho adaptável!
     :param txt: A mensagem ou texto que será escrito
     :param cor: Usa cores de fundo
     :return: Retorna o texto constumizado
